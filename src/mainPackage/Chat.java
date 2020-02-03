@@ -25,8 +25,8 @@ public class Chat {
         String author = sc.nextLine();
         try {
             Socket s = new Socket("localhost", 1234);
-            ObjectInputStream ois = new ObjectInputStream(s.getInputStream());
             ObjectOutputStream oos = new ObjectOutputStream(s.getOutputStream());
+            ObjectInputStream ois = new ObjectInputStream(s.getInputStream());
             SendMessage sm = new SendMessage(author, oos, sc);
             ReadMessage rm = new ReadMessage(ois);
             sm.start();

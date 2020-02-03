@@ -5,12 +5,13 @@
  */
 package mainPackage;
 
+import java.io.Serializable;
+
 /**
  *
  * @author diego
  */
-public class ChatMessage {
-
+public class ChatMessage implements Serializable{
     private String header;
     private String text;
     private String author;
